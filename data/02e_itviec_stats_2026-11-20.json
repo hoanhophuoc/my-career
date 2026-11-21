@@ -1,0 +1,111 @@
+{
+  "total": 75,
+  "companies": 55,
+  "salary_visible": 17,
+  "salary_visible_pct": 22.7,
+  "levels": [
+    [
+      "Backend Developer",
+      42
+    ],
+    [
+      "Fullstack Developer",
+      12
+    ],
+    [
+      "Software/Technical Architect",
+      6
+    ],
+    [
+      "Manager",
+      3
+    ],
+    [
+      "Internship Accepted",
+      3
+    ],
+    [
+      "Fresher Accepted",
+      2
+    ],
+    [
+      "Mobile Application Developer",
+      1
+    ],
+    [
+      "AI / Machine Learning Engineer",
+      1
+    ],
+    [
+      "IT Support",
+      1
+    ],
+    [
+      "Project Manager",
+      1
+    ],
+    [
+      "Solution Architect",
+      1
+    ],
+    [
+      "Data Engineer",
+      1
+    ],
+    [
+      "Integration & Legacy Systems Developer",
+      1
+    ]
+  ],
+  "worktype": [
+    [
+      "At office",
+      50
+    ],
+    [
+      "Hybrid",
+      20
+    ],
+    [
+      "Remote",
+      5
+    ]
+  ],
+  "cities": [
+    [
+      "Ho Chi Minh",
+      67
+    ],
+    [
+      "Ho Chi Minh - Ha Noi",
+      5
+    ],
+    [
+      "Ha Noi - Ho Chi Minh",
+      1
+    ],
+    [
+      "Ho Chi Minh - Ha Noi - Da Nang",
+      1
+    ],
+    [
+      "Ho Chi Minh - Da Nang",
+      1
+    ]
+  ],
+  "queries": [
+    [
+      "java",
+      51
+    ],
+    [
+      "backend",
+      24
+    ]
+  ],
+  "salary_usd_median_ceiling": 1750,
+  "salary_usd_min": 1000,
+  "salary_usd_max": 5000,
+  "entry_level": 5,
+  "entry_pct": 6.7
+}

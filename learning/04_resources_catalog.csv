@@ -1,0 +1,28 @@
+id,ten,url,loai,dung_cho,giai_doan,trang_thai_http,ngay_kiem_chung,ghi_chu
+R01,dev.java — General Tutorials,https://dev.java/learn/,tài liệu chính thức,Java core: OOP/Generics/Streams/IO/Virtual Threads/JVM tools,W1-W2,200,2026-11-20,"Miễn phí, của Oracle. Mục lục: language/oop, language/fp, api/collections-and-streams, api/io, api/virtual-threads, jvm/core-tools"
+R02,dev.java — JVM Core Tools,https://dev.java/learn/jvm/core-tools/,tài liệu chính thức,jps/jstack/jcmd/jfr cơ bản,W2,200,2026-11-20,Đọc đúng chương này thay vì sách JVM dày
+R03,Spring Boot Reference,https://docs.spring.io/spring-boot/index.html,tài liệu chính thức,Boot 4.2.x: web/data/security/testing/actuator,W3-W16,200,2026-11-20,"Bản ổn định 4.2.0 (GA 19/11/2026). Chọn đúng version 4.2, đừng đọc 3.x"
+R04,Spring Boot System Requirements,https://docs.spring.io/spring-boot/system-requirements.html,tài liệu chính thức,Java 17+ / Java 25 LTS / Framework 7.0.x,W0,200,2026-11-20,Căn cứ để chốt JDK 25 + Boot 4.2
+R05,Spring Framework Reference,https://docs.spring.io/spring-framework/reference/,tài liệu chính thức,IoC container / Web MVC / Data JPA / Transactions / Security,W3-W16,200,2026-11-20,"Đọc theo mục, không tuần tự: Core→IoC, Web→Servlet, Data Access"
+R06,Spring Guides,https://spring.io/guides,tài liệu chính thức,Guide ngắn 15-30 phút có code chạy được,W3-W9,200,2026-11-20,Dùng cho ngày 15/17/19/26 khi cần bản tối giản
+R07,Spring Initializr,https://start.spring.io/,công cụ,Tạo project Boot 4.2 + Java 25,W3,200,2026-11-20,"Chọn: Web, Validation, Data JPA, PostgreSQL, Actuator"
+R08,Testcontainers for Java,https://testcontainers.com/,tài liệu chính thức,Integration test với Postgres thật trong Docker,W4/W8,200,2026-11-20,Bắt buộc cho điều kiện B1 của readiness rubric
+R09,PostgreSQL Documentation,https://www.postgresql.org/docs/,tài liệu chính thức,SQL nền/tutorial/kiểu dữ liệu/index,W2,200,2026-11-20,Chương Tutorial + SQL Language là đủ cho fresher
+R10,PostgreSQL — Using EXPLAIN,https://www.postgresql.org/docs/current/using-explain.html,tài liệu chính thức,Đọc query plan,W2/W14,200,2026-11-20,Dùng cùng R11
+R11,Use The Index Luke,https://use-the-index-luke.com/,sách online miễn phí,Index và vì sao query chậm,W2/W14,200,2026-11-20,Đọc chương 1-3. Sách hay nhất về index cho người mới
+R12,Exercism — Java Track,https://exercism.org/tracks/java,bài tập có test tự động,Java cú pháp + DSA nhẹ,W1-W4,200,2026-11-20,"Miễn phí; phần test tự chấm là đủ, không cần mentor"
+R13,NeetCode,https://neetcode.io/,lộ trình DSA,Lộ trình 150 bài + pattern,W1-W24,200,2026-11-20,Dùng danh sách pattern miễn phí; không cần premium
+R14,roadmap.sh — Java,https://roadmap.sh/java,sơ đồ kiến thức,Rà lỗ hổng kiến thức Java,W5/W22,200,2026-11-20,"Dùng để tự kiểm mình thiếu gì, không học tuần tự"
+R15,MIT OCW 6.006,https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/,khóa học miễn phí,Nền tảng thuật toán (video + bài tập),W1-W8 (tùy chọn),200,2026-11-20,Chỉ dùng khi muốn hiểu sâu; không bắt buộc cho fresher VN
+R16,CMU 15-445 Database Systems,https://15445.courses.cs.cmu.edu/,khóa học miễn phí,"DB internals (B+tree, buffer, transaction)",W22 (tùy chọn),200,2026-11-20,Xem 3-4 bài đầu nếu muốn trả lời câu vì sao index nhanh
+R17,System Design Primer,https://github.com/donnemartin/system-design-primer,tài liệu miễn phí,System design cơ bản,W17-W22,200,2026-11-20,"Đọc phần Index + 3 case study nhỏ, không đọc hết"
+R18,MOOC.fi,https://www.mooc.fi/en/,khóa học miễn phí,Lập trình nhập môn (Java/Python),Không dùng,200,2026-11-20,Không cần: Hoàn đã qua mức này
+R19,CS50x,https://cs50.harvard.edu/x/,khóa học miễn phí,Nền tảng CS,Không dùng,200,2026-11-20,Không cần cho mục tiêu 6 tháng
+R20,Refactoring.Guru — Design Patterns,https://refactoring.guru/design-patterns,tài liệu miễn phí,Pattern hay gặp (Strategy/Factory/Observer/Adapter),W7/W18,200,2026-11-20,Chỉ đọc 5 pattern hay được hỏi; không học thuộc 23 pattern
+R21,Apache Kafka Documentation,https://kafka.apache.org/documentation/,tài liệu chính thức,Messaging cơ bản,W12 (nếu chọn Kafka),200,2026-11-20,"Chỉ phần Introduction + Quickstart; RabbitMQ cũng chấp nhận, chọn 1"
+R22,Docker Docs,https://docs.docker.com/,tài liệu chính thức,Dockerfile multi-stage/compose,W4/W9,200,2026-11-20,Đọc Get Started + Multi-stage builds; bỏ Swarm/K8s ở giai đoạn này
+R23,Pro Git (sách miễn phí),https://git-scm.com/book/en/v2,tài liệu miễn phí,Git: branch/rebase/conflict,S0-W4,200,2026-11-20,Chương 2-3 là đủ; chương 6 hữu ích cho PR
+R24,Flyway Documentation,https://documentation.red-gate.com/flyway,tài liệu chính thức,Database migration,W6,200,2026-11-21,URL có thể đổi sau khi Redgate mua Flyway; nếu 404 thì dùng Liquibase hoặc schema.sql
+R25,Vlad Mihalcea — JPA/Hibernate,https://vladmihalcea.com/,blog kỹ thuật miễn phí,JPA/Hibernate: N+1/lazy/transaction,W4/W6,200,2026-11-21,Tra cứu từng bài khi gặp lỗi; không đọc tuần tự
+R26,Baeldung,https://www.baeldung.com/,blog kỹ thuật,Tra cứu nhanh Spring,Tra cứu,200,2026-11-21,Trả 403 với curl (chặn bot) nhưng mở được bằng trình duyệt. KHÔNG đặt làm tài liệu chính vì dễ đọc thụ động
+R27,freeCodeCamp,https://www.freecodecamp.org/,khóa học miễn phí,SQL/JS cơ bản,Không ưu tiên,200,2026-11-21,Chỉ dùng nếu cần thêm bài tập SQL có chấm

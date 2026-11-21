@@ -1,0 +1,5 @@
+{
+  "_comment": "Cấu hình cục bộ — KHÔNG commit (đã nằm trong .gitignore). Điền toạ độ điểm gốc của bạn.",
+  "home": [0.0, 0.0],
+  "max_km": 15
+}

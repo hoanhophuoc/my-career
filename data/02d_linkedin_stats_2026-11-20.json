@@ -1,0 +1,315 @@
+{
+ "total": 392,
+ "with_salary": 7,
+ "junior_flags": 113,
+ "senior_title": 179,
+ "reachable": 111,
+ "reachable_java": 45,
+ "reachable_qa": 0,
+ "reachable_dotnet": 9,
+ "hcm": 389,
+ "java": 215,
+ "spring": 87,
+ "spring_boot": 75,
+ "dotnet": 60,
+ "years_none": 95,
+ "years_0_1": 20,
+ "years_2": 30,
+ "years_3p": 247,
+ "seniority": [
+  [
+   "Mid-Senior level",
+   163
+  ],
+  [
+   "Not Applicable",
+   158
+  ],
+  [
+   "Associate",
+   27
+  ],
+  [
+   "Entry level",
+   26
+  ],
+  [
+   "Internship",
+   7
+  ],
+  [
+   "Executive",
+   6
+  ],
+  [
+   "Director",
+   5
+  ]
+ ],
+ "top_tech": [
+  [
+   "english",
+   245
+  ],
+  [
+   "java",
+   187
+  ],
+  [
+   "ci/cd",
+   182
+  ],
+  [
+   "python",
+   149
+  ],
+  [
+   "sql",
+   133
+  ],
+  [
+   "agile",
+   132
+  ],
+  [
+   "aws",
+   126
+  ],
+  [
+   "git",
+   123
+  ],
+  [
+   "microservices",
+   113
+  ],
+  [
+   "docker",
+   107
+  ],
+  [
+   "rest api",
+   102
+  ],
+  [
+   "kubernetes",
+   96
+  ],
+  [
+   "azure",
+   95
+  ],
+  [
+   "postgresql",
+   91
+  ],
+  [
+   "spring",
+   87
+  ],
+  [
+   "javascript",
+   78
+  ],
+  [
+   "spring boot",
+   75
+  ],
+  [
+   "unit test",
+   75
+  ],
+  [
+   "typescript",
+   73
+  ],
+  [
+   "c#",
+   69
+  ],
+  [
+   "gcp",
+   66
+  ],
+  [
+   "linux",
+   65
+  ],
+  [
+   "kafka",
+   61
+  ],
+  [
+   "mysql",
+   60
+  ],
+  [
+   ".net",
+   60
+  ]
+ ],
+ "top_companies": [
+  [
+   "DXC Technology",
+   33
+  ],
+  [
+   "Amaris Consulting | Part of Mantu",
+   21
+  ],
+  [
+   "Motorola Solutions",
+   14
+  ],
+  [
+   "HCLTech Vietnam",
+   12
+  ],
+  [
+   "Qualcomm",
+   11
+  ],
+  [
+   "OPSWAT",
+   9
+  ],
+  [
+   "EPAM Systems",
+   8
+  ],
+  [
+   "Hitachi Digital Services",
+   8
+  ],
+  [
+   "WorldQuant",
+   7
+  ],
+  [
+   "Capgemini",
+   6
+  ],
+  [
+   "Astek Vietnam",
+   5
+  ],
+  [
+   "NTT DATA, Inc.",
+   5
+  ],
+  [
+   "Axon",
+   5
+  ],
+  [
+   "GoTymeX",
+   5
+  ],
+  [
+   "Deloitte",
+   5
+  ],
+  [
+   "Kake",
+   5
+  ],
+  [
+   "CODE LEAP",
+   5
+  ],
+  [
+   "AS White Global",
+   5
+  ],
+  [
+   "Money Forward Vietnam Co., Ltd",
+   4
+  ],
+  [
+   "Zalo",
+   4
+  ]
+ ],
+ "entry_companies": [
+  [
+   "DXC Technology",
+   11
+  ],
+  [
+   "EPAM Systems",
+   7
+  ],
+  [
+   "OPSWAT",
+   4
+  ],
+  [
+   "Alignerr",
+   4
+  ],
+  [
+   "MoMo (M_Service)",
+   3
+  ],
+  [
+   "Deloitte",
+   3
+  ],
+  [
+   "Hitachi Digital Services",
+   3
+  ],
+  [
+   "Astek Vietnam",
+   3
+  ],
+  [
+   "Ampere",
+   3
+  ],
+  [
+   "Qualcomm",
+   3
+  ],
+  [
+   "HCLTech Vietnam",
+   3
+  ],
+  [
+   "GeoComply",
+   3
+  ],
+  [
+   "Tiger Tribe (A HEINEKEN Company)",
+   3
+  ],
+  [
+   "Motorola Solutions",
+   3
+  ],
+  [
+   "WorldQuant",
+   3
+  ],
+  [
+   "CEVA Logistics",
+   2
+  ],
+  [
+   "ASSA ABLOY Group",
+   2
+  ],
+  [
+   "Netcompany",
+   2
+  ],
+  [
+   "KNOREX",
+   2
+  ],
+  [
+   "Amaris Consulting | Part of Mantu",
+   2
+  ]
+ ]
+}

@@ -1,0 +1,60 @@
+equals đúng mà hashCode sai thì chuyện gì xảy ra?	HashMap/HashSet tìm sai bucket nên không thấy phần tử dù equals bằng nhau. Luôn override cả hai, dùng Objects.hash().	JavaCore
+HashMap lưu và tìm phần tử thế nào?	hash(key) → index bucket; trùng bucket thì so sánh equals trong linked list (hoặc cây khi nhiều). Vượt load factor 0.75 thì resize gấp đôi.	JavaCore
+Khi nào dùng interface thay abstract class?	Interface khi nhiều lớp không liên quan cùng "làm được" một việc; abstract khi cần chia sẻ code/trạng thái. TaskFlow: TaskRepository là interface vì Spring Data sinh impl.	JavaCore
+Vì sao String immutable và hệ quả?	An toàn khi chia sẻ + hash ổn định làm key. Hệ quả: nối chuỗi trong vòng lặp tạo N object → dùng StringBuilder.	JavaCore
+StringBuilder khác StringBuffer?	StringBuilder nhanh, không đồng bộ; StringBuffer có synchronized. Trong 1 thread luôn dùng StringBuilder.	JavaCore
+Checked và unchecked exception khác gì?	Checked phải khai báo/bắt (IOException); unchecked là RuntimeException (NullPointerException). Lỗi lập trình → unchecked.	JavaCore
+try-with-resources giải quyết gì?	Tự đóng resource theo thứ tự ngược khi ra khỏi block, kể cả khi có exception. Class phải implements AutoCloseable.	JavaCore
+Vì sao tạo exception riêng có errorCode?	Để tầng trên map sang HTTP status/mã lỗi mà không phụ thuộc message. Ví dụ NotFoundException → 404.	JavaCore
+Type erasure là gì và hệ quả?	Thông tin generic bị xoá khi biên dịch → không new T[], không instanceof List<String>; cần Class<T> nếu muốn biết kiểu.	JavaCore
+? extends T khác ? super T?	extends = đọc ra (producer), super = ghi vào (consumer). PECS: Producer Extends, Consumer Super.	JavaCore
+Khi nào KHÔNG nên dùng Stream?	Khi cần break/continue, khi logic nhiều nhánh, khi cần debug từng bước. Stream hợp cho biến đổi tập dữ liệu một chiều.	JavaCore
+groupingBy dùng để làm gì?	Nhóm theo key thành Map<K, List<V>>; kèm downstream như counting()/averagingInt() để tính ngay trong lúc nhóm.	JavaCore
+Optional dùng sai thế nào?	Không dùng làm field entity hay tham số; dùng làm kiểu trả về cho "có thể không có". Không .get() mà không kiểm tra.	JavaCore
+ArrayList vs LinkedList?	ArrayList truy cập index O(1), chèn giữa O(n); LinkedList chèn/xoá đầu O(1) nhưng truy cập O(n). Thực tế 95% dùng ArrayList.	JavaCore
+HashSet đảm bảo điều gì?	Không trùng (theo equals+hashCode), không thứ tự. Cần thứ tự chèn → LinkedHashSet; cần sắp xếp → TreeSet.	JavaCore
+Vì sao không new Thread() trong web app?	Tạo/huỷ thread tốn kém và không giới hạn → cạn tài nguyên. Dùng ExecutorService/thread pool có hàng đợi và giới hạn.	JavaCore
+synchronized khác AtomicInteger?	synchronized khoá cả khối (chậm hơn, an toàn cho nhiều biến); Atomic dùng CAS cho 1 biến (nhanh, chỉ 1 biến).	JavaCore
+volatile đảm bảo gì?	Đảm bảo visibility giữa thread (đọc luôn thấy giá trị mới nhất), KHÔNG đảm bảo atomic (i++ vẫn sai).	JavaCore
+Deadlock xảy ra khi nào?	2 thread giữ 2 khoá và chờ nhau. Phòng: luôn khoá theo thứ tự cố định, dùng tryLock có timeout.	JavaCore
+CompletableFuture để làm gì?	Chạy async và ghép kết quả (thenApply/thenCombine/allOf) mà không block. Dùng khi gọi song song nhiều nguồn.	JavaCore
+Heap và stack khác nhau?	Stack: biến cục bộ + lời gọi hàm, riêng từng thread. Heap: object, dùng chung, do GC dọn.	JavaCore
+OutOfMemoryError khác StackOverflowError?	OOM: hết heap (giữ quá nhiều object hoặc sinh quá nhanh). StackOverflow: đệ quy quá sâu/lời gọi vòng.	JavaCore
+record (Java 16+) dùng khi nào?	DTO bất biến ngắn gọn: tự sinh constructor, equals, hashCode, toString. Không thay entity JPA (cần constructor rỗng).	JavaCore
+Virtual threads (Java 21+) giải bài toán gì?	Nhiều thread nhẹ cho I/O blocking → scale cao mà không cần reactive. Không giúp gì cho CPU-bound.	JavaCore
+DI là gì và lợi ích?	Đối tượng nhận phụ thuộc từ ngoài thay vì tự new → dễ test (mock), dễ thay implementation, không phụ thuộc cứng.	SpringBoot
+Vì sao ưu tiên constructor injection?	Không null, không vòng phụ thuộc ẩn, field final, test dễ. Field injection che giấu phụ thuộc.	SpringBoot
+@Component vs @Service vs @Repository?	Cùng là bean; @Repository thêm dịch exception JPA sang DataAccessException. @Service chỉ là ngữ nghĩa.	SpringBoot
+Khi nào dùng @Bean thay @Component?	Khi class không do mình viết (thư viện) hoặc cần cấu hình theo điều kiện/giá trị cấu hình.	SpringBoot
+Bean mặc định scope gì và hệ quả?	Singleton → dùng chung nhiều request, nên PHẢI stateless. Có trạng thái → race condition.	SpringBoot
+Auto-configuration chạy thế nào?	Spring Boot đọc điều kiện (@ConditionalOnClass/@ConditionalOnMissingBean) và cấu hình sẵn bean khi có dependency trên classpath.	SpringBoot
+@Transactional rollback khi nào?	Mặc định chỉ với RuntimeException/Error. Checked exception phải khai báo rollbackFor. Self-invocation không qua proxy → mất transaction.	SpringBoot
+Propagation REQUIRED vs REQUIRES_NEW?	REQUIRED: dùng transaction hiện có hoặc tạo mới. REQUIRES_NEW: luôn tạo transaction riêng, tách rollback (dùng cho audit log).	SpringBoot
+N+1 là gì, phát hiện và sửa?	1 câu lấy N bản ghi cha + N câu lấy con. Phát hiện bằng log SQL. Sửa: JOIN FETCH/@EntityGraph hoặc @BatchSize. TaskFlow: 21 → 1 câu.	SpringBoot
+Vì sao eager là bẫy?	Luôn kéo dữ liệu liên quan → thừa, chậm, dễ N+1. Mặc định nên LAZY ở @OneToMany và fetch đúng chỗ cần.	SpringBoot
+LazyInitializationException do đâu?	Truy cập quan hệ lazy sau khi session đã đóng (ngoài transaction). Sửa: fetch trong transaction hoặc DTO projection.	SpringBoot
+@RestController khác @Controller?	@RestController = @Controller + @ResponseBody: trả dữ liệu (JSON) thay vì tên view.	SpringBoot
+Xử lý lỗi tập trung thế nào?	@RestControllerAdvice + @ExceptionHandler map exception → ResponseEntity/ProblemDetail; tránh lặp try/catch ở controller.	SpringBoot
+ProblemDetail là gì?	Chuẩn RFC 9457 cho body lỗi (type/title/status/detail) → client parse thống nhất. Spring hỗ trợ sẵn từ Boot 3.	SpringBoot
+@Valid đặt ở đâu?	Ở @RequestBody/@PathVariable trong controller; lỗi ném MethodArgumentNotValidException → xử lý ở advice.	SpringBoot
+JWT có mã hoá nội dung không?	Không — payload chỉ base64, ai cũng đọc. Chỉ chữ ký đảm bảo không bị sửa. Vì vậy không đặt dữ liệu nhạy cảm, phải HTTPS, phải có hạn.	SpringBoot
+Request đi qua Spring Security thế nào?	FilterChain: các filter (JWT filter của mình chèn vào) → AuthorizationFilter kiểm quyền → controller.	SpringBoot
+Vì sao lọc dữ liệu theo user phải ở tầng service?	Controller có thể bị quên; service là nơi duy nhất mọi truy vấn đi qua → không lộ dữ liệu người khác. TaskFlow: trả 404 thay 403.	SpringBoot
+@WebMvcTest vs @DataJpaTest vs @SpringBootTest?	WebMvc: chỉ web layer + mock service (nhanh). DataJpa: chỉ JPA + DB. SpringBootTest: cả context (chậm, dùng cho integration).	SpringBoot
+Testcontainers giải quyết gì?	Chạy DB thật trong Docker cho test → không lệch hành vi như H2, không cần DB cài sẵn trên máy.	SpringBoot
+Quản lý cấu hình theo môi trường thế nào?	application-{profile}.yml + biến môi trường; secret không commit, không hard-code.	SpringBoot
+Actuator dùng làm gì và rủi ro gì?	health/metrics/info cho giám sát; phải giới hạn endpoint public, không mở env/heapdump ra ngoài.	SpringBoot
+INNER JOIN vs LEFT JOIN?	INNER chỉ lấy dòng khớp 2 bên; LEFT giữ tất cả dòng bảng trái, bên phải NULL nếu không khớp.	SQL
+WHERE và HAVING khác nhau?	WHERE lọc dòng trước khi gộp nhóm; HAVING lọc sau GROUP BY (dùng với hàm tổng hợp).	SQL
+Index là gì?	Cấu trúc (thường B-tree) giúp tìm dòng nhanh hơn quét toàn bảng, đánh đổi tốc độ ghi + dung lượng.	SQL
+Khi nào index KHÔNG được dùng?	Khi có hàm/biến đổi trên cột (WHERE lower(name)=...), kiểu dữ liệu lệch, bảng quá nhỏ, hoặc chọn quá nhiều dòng nên planner chọn seq scan.	SQL
+Thứ tự cột trong composite index có quan trọng?	Rất quan trọng: chỉ dùng được khi điều kiện khớp tiền tố trái. (a,b) dùng được cho a và a+b; không dùng được cho riêng b.	SQL
+EXPLAIN ANALYZE cho biết gì?	Kế hoạch thực thi thật + thời gian + số dòng từng bước. Tìm Seq Scan trên bảng lớn và chênh lệch rows ước lượng/thực tế.	SQL
+ACID là gì?	Atomicity (tất cả hoặc không), Consistency (ràng buộc), Isolation (cô lập), Durability (đã commit là bền).	SQL
+4 mức isolation?	READ UNCOMMITTED (dirty read), READ COMMITTED (mặc định Postgres), REPEATABLE READ, SERIALIZABLE. Càng cao càng ít lỗi, càng chậm.	SQL
+Khoá lạc quan khác khoá bi quan?	Lạc quan: @Version, kiểm tra khi ghi, hợp khi ít tranh chấp. Bi quan: SELECT FOR UPDATE, giữ khoá, hợp khi tranh chấp cao.	SQL
+Deadlock trong DB xử lý thế nào?	DB phát hiện và huỷ 1 transaction → trả lỗi; code phải retry. Phòng: khoá theo thứ tự nhất quán, transaction ngắn.	SQL
+1NF/2NF/3NF nói gì (ngắn)?	1NF: giá trị nguyên tử. 2NF: không phụ thuộc một phần khoá. 3NF: không phụ thuộc bắc cầu vào cột không khoá.	SQL
+Vì sao OFFSET lớn chậm?	DB vẫn phải đọc và bỏ qua offset dòng. Keyset (WHERE id > last_id ORDER BY id LIMIT n) nhanh và ổn định hơn.	SQL
+COUNT(*) khác COUNT(cột)?	COUNT(*) đếm dòng; COUNT(cột) bỏ qua NULL. COUNT(1) tương đương COUNT(*) về kết quả.	SQL
+Vì sao transaction phải ngắn?	Giữ khoá + connection lâu → chặn người khác, tăng deadlock. Không gọi API ngoài trong transaction.	SQL

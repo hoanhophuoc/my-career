@@ -1,0 +1,110 @@
+{
+  "raw_rows": 86,
+  "companies_raw": 56,
+  "it_rows": 50,
+  "entry_0_1y": 24,
+  "entry_with_salary": 10,
+  "entry_salary_median_mid_trieu": 25.0,
+  "entry_salary_min_trieu": 6.0,
+  "entry_salary_max_trieu": 50.0,
+  "java_tag_in_it": 26,
+  "spring_tag_in_it": 7,
+  "sql_tag_in_it": 20,
+  "english_tag_in_it": 3,
+  "worktype": [
+    [
+      "Onsite",
+      43
+    ],
+    [
+      "Hybrid",
+      7
+    ]
+  ],
+  "districts": [
+    [
+      "Quận Một",
+      9
+    ],
+    [
+      "Quận Ba",
+      8
+    ],
+    [
+      "Quận Phú Nhuận",
+      7
+    ],
+    [
+      "Quận Hai",
+      5
+    ],
+    [
+      "Quận Thủ Đức",
+      5
+    ],
+    [
+      "Quận Tân Bình",
+      4
+    ],
+    [
+      "Quận Bình Thạnh",
+      4
+    ],
+    [
+      "Quận Bảy",
+      3
+    ]
+  ],
+  "top_companies": [
+    [
+      "CÔNG TY CỔ PHẦN CÔNG NGHỆ UNITRUST VIỆT NAM",
+      6
+    ],
+    [
+      "Công ty Cổ Phần Chuỗi Bán Lẻ Mini Min",
+      5
+    ],
+    [
+      "Unit Technology Corporation",
+      3
+    ],
+    [
+      "Edtronaut",
+      3
+    ],
+    [
+      "Bouygues Construction IT Vietnam",
+      2
+    ],
+    [
+      "Công ty Cổ phần Dịch vụ Trực tuyến Cộng Đồng Việt (VietUnion)",
+      2
+    ],
+    [
+      "Gsoft",
+      1
+    ],
+    [
+      "Công ty Cổ phần Starack",
+      1
+    ],
+    [
+      "Smartbit Technology",
+      1
+    ],
+    [
+      "Công ty TNHH Giải pháp phần mềm Doanh nghiệp 5S",
+      1
+    ]
+  ],
+  "companies_per_source": {
+    "glints": 56,
+    "itviec": 55,
+    "linkedin": 163
+  },
+  "overlap_counts": {
+    "glints_itviec": 1,
+    "glints_linkedin": 4,
+    "itviec_linkedin": 11
+  }
+}

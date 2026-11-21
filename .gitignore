@@ -1,0 +1,52 @@
+# ── Python cache & build ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Dữ liệu cục bộ KHÔNG BAO GIỜ commit ──────────────────────────────────────
+# Cấu hình cục bộ (vị trí nhà, bán kính đi lại...). Không commit, không chia sẻ.
+config.local.json
+
+# Bản thô JD nguyên văn của bên thứ ba (có bản quyền, có thể chứa email/SĐT),
+# hội thoại riêng tư, dữ liệu tính theo vị trí nhà, file base64 thô.
+.local_private/
+
+# File base64 HTML dump thô
+tools/*.b64
+
+# File __pycache__ trong tools/
+tools/__pycache__/
+
+# Bản xuất sạch (dùng cho repo công khai) — sinh bởi tools/make_clean_export.sh
+dist_clean/
+
+# ── Hệ điều hành ─────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.envrc
+.env
+.env.local
+
+# ── Repo clone thực chiến (không push lên) ───────────────────────────────────
+_repos/
+_work_*

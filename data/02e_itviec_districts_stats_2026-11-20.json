@@ -1,0 +1,20 @@
+{
+ "ngay": "2026-11-20",
+ "nguon": "JSON-LD addressLocality tren trang JD ITviec",
+ "tong_tin": 75,
+ "co_quan_hcm": 53,
+ "trong_15km": 53,
+ "khong_khai_quan": 22,
+ "phan_bo_quan": {
+  "Quận 1": 12,
+  "Quận 10": 8,
+  "Thành phố Thủ Đức": 7,
+  "Quận 7": 7,
+  "Quận 12": 6,
+  "Quận 3": 6,
+  "Quận Bình Thạnh": 5,
+  "Quận 2": 1,
+  "Bình Thạnh": 1
+ },
+ "ghi_chu": "quan lay tu du lieu cau truc cua trang JD; Netcompany suy tu phuong Thanh My Tay (Binh Thanh)"
+}
